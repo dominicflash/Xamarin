@@ -1,0 +1,9 @@
+/Users/prudvee/Projects/SearchResults/SearchResults/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/prudvee/Projects/SearchResults/SearchResults/obj/Debug/SearchResults.FirstPage.xaml
+/Users/prudvee/Projects/SearchResults/SearchResults/obj/Debug/FirstPage.xaml.g.cs
+/Users/prudvee/Projects/SearchResults/SearchResults/bin/Debug/Xamarin.Forms.Core.dll
+/Users/prudvee/Projects/SearchResults/SearchResults/bin/Debug/Xamarin.Forms.Xaml.dll
+/Users/prudvee/Projects/SearchResults/SearchResults/bin/Debug/SearchResults.dll.mdb
+/Users/prudvee/Projects/SearchResults/SearchResults/bin/Debug/SearchResults.dll
+/Users/prudvee/Projects/SearchResults/SearchResults/obj/Debug/SearchResults.dll
+/Users/prudvee/Projects/SearchResults/SearchResults/obj/Debug/SearchResults.dll.mdb

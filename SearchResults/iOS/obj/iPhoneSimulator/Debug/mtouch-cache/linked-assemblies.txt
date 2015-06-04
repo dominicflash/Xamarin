@@ -1,0 +1,13 @@
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.Forms.Platform.iOS.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.Xml.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.iOS.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.Forms.Xaml.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.Core.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SearchResults.iOS.exe
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Mono.Dynamic.Interpreter.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SearchResults.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.Net.Http.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.Forms.Core.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/mscorlib.dll
+/Users/prudvee/Projects/SearchResults/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.Runtime.Serialization.dll

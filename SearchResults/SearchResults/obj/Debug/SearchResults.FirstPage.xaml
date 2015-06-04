@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SearchResults.FirstPage" Title = "Search">
+	<ContentPage.Content>
+		<RelativeLayout>
+			<StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1.0}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1.0}" Orientation="Vertical" Spacing="0" Padding="0">
+				
+				<ListView VerticalOptions="Fill" ItemTapped="customlisttapped" ItemsSource="{Binding SearchResultUIBean}" HasUnevenRows="true" BackgroundColor="White" x:Name="searchresultlist">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<ViewCell.View>
+									<StackLayout Orientation="Vertical" Spacing="0" Padding="0,1,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+
+										<StackLayout HorizontalOptions="End" VerticalOptions="FillAndExpand" BackgroundColor="White">
+													<AbsoluteLayout HorizontalOptions="Center" VerticalOptions="Center">
+														<StackLayout Padding="18" VerticalOptions="Center" HorizontalOptions="Center">
+															<Image HorizontalOptions="Center" VerticalOptions="Center" Source="{Binding imageUrl}" Bounds="0,0,46,46"/>
+														</StackLayout>
+														<Image Source="{Binding promoSource}" Bounds="0,0,23,23"/>
+													</AbsoluteLayout>
+										</StackLayout>
+
+										<StackLayout Spacing="1" Padding="0" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+											<StackLayout WidthRequest="188" Orientation="Vertical" BackgroundColor="#01A2B4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10,10,0,10" Spacing="0">
+												<StackLayout Padding="0" Spacing="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+													<Label Font="Arial" LineBreakMode="TailTruncation" FontSize="13" Text="{Binding title}" TextColor="#ffffff" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+													<Label Font="Arial" LineBreakMode="TailTruncation" FontSize="12" Text="{Binding subTitle}" TextColor="#ffffff" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+												</StackLayout>
+											</StackLayout>
+
+										</StackLayout>
+										<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Horizontal" Spacing="1" Padding="0">
+											<StackLayout WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="#426F90">
+												<Label Font="Arial-Regular,10" Text="{Binding price}" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+											</StackLayout>
+											<StackLayout WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="#426F90">
+												<Label Font="Arial-Regular,10" Text="{Binding stock}" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+											</StackLayout>
+											<StackLayout Orientation="Horizontal" WidthRequest="25" HorizontalOptions="FillAndExpand" Padding="5" BackgroundColor="#143554">
+												<Label Font="Arial-Regular,10" Text="QTY" TextColor="White" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+												<StackLayout Padding="2" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+													<Entry Text="{Binding QTY}" TextColor="Black" Keyboard="Numeric" WidthRequest="40" />
+												</StackLayout>
+											</StackLayout>
+											<StackLayout Orientation="Horizontal" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="#EE3B34">
+												<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="0" Spacing="5" Orientation="Horizontal">
+													<Button Clicked="addToCartClicked" BackgroundColor="Transparent" Image="add" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+												</StackLayout>
+											</StackLayout>
+										</StackLayout>
+										<StackLayout Spacing="0" Padding="0,2,0,0" HorizontalOptions="FillAndExpand" HeightRequest="1">
+											<StackLayout Spacing="0" Padding="0" HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray">
+											</StackLayout>
+										</StackLayout>
+									</StackLayout>
+								</ViewCell.View>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</StackLayout>
+			<!-- Start of Save search layout -->
+			<StackLayout x:Name="savedSearchRootLayout" IsVisible="false" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1.0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1.0}" Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="0" Spacing="0" VerticalOptions="FillAndExpand" BackgroundColor="#90000000">
+				<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="10,0,10,0" Spacing="0" VerticalOptions="CenterAndExpand">
+					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="20" Spacing="0" BackgroundColor="#102B45">
+						<Label Text="Save this Search" TextColor="White" Font="Arial,14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" XAlign="Center" YAlign="Center"/>
+						<Image x:Name="closeSaveSearchIcon" Source="searchpopcross.png" HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
+					</StackLayout>
+					<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="White" Padding="10,30,10,30" Spacing="5">
+						<Label Text="Name" TextColor="#102B46" Font="Arial,12" HorizontalOptions="StartAndExpand" VerticalOptions="Start" XAlign="Center" YAlign="Center"/>
+						<Frame HasShadow="false" Padding="10,10,10,10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" OutlineColor="#bdbdbd">
+							<Entry x:Name="saveSearchEntry" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+						</Frame>
+					</StackLayout>
+					<StackLayout IsVisible="true" x:Name="AddProfileSave" Orientation="Vertical" Spacing="0" Padding="0,0,0,1">
+						<StackLayout x:Name="AddProfileSaveButton" Orientation="Horizontal" Padding="10,15,10,15" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="#EE3B34">
+							<Label Font="Arial,14" TextColor="White" Text="Save" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+			</StackLayout>
+			<!-- End of Save search layout -->
+
+				
+			
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>
+	
